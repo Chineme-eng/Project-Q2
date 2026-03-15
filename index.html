@@ -702,6 +702,38 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
   color: var(--black);
   line-height: 1.5;
 }
+.mission-video {
+  margin-top: 18px;
+  padding: 18px;
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  box-shadow: var(--sh1);
+}
+
+.mission-video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.mission-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.mission-video-cap {
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: var(--gd);
+  line-height: 1.7;
+}
 </style>
 </head>
 <body>
@@ -870,25 +902,50 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
         </div>
       </div>
       <div class="princs">
-        <div class="princ rv">
-          <div class="picn">✏️</div>
-          <div class="pih"><h4>Research Editing &amp; Publication Support</h4><p>Research editing and publication support tailored to meet the unique needs of each author, ensuring their work is polished and ready for competitive academic landscapes.</p></div>
-        </div>
-        <div class="princ rv d1">
-          <div class="picn">📚</div>
-          <div class="pih"><h4>Accessible Online Resources</h4><p>Diverse online courses on research and health topics. Need-based scholarships available. 80% of profits donated to the Q2 Foundation.</p></div>
-        </div>
-        <div class="princ rv d2">
-          <div class="picn">🖊️</div>
-          <div class="pih"><h4>Youth-Led Blog Platform</h4><p>A platform for youth to express STEAM interests, collaborate on innovative research ideas, and communicate questions about the research process in a supportive environment.</p></div>
-        </div>
-        <div class="princ rv d3">
-          <div class="picn">🌍</div>
-          <div class="pih"><h4>The Q2 Foundation</h4><p>Fostering education, innovation, and growth in STEAM — actively promoting engagement and empowerment in the community.</p></div>
-        </div>
-      </div>
+  <div class="princ rv">
+    <div class="picn">✏️</div>
+    <div class="pih">
+      <h4>Research Editing &amp; Publication Support</h4>
+      <p>Research editing and publication support tailored to meet the unique needs of each author, ensuring their work is polished and ready for competitive academic landscapes.</p>
     </div>
   </div>
+  <div class="princ rv d1">
+    <div class="picn">📚</div>
+    <div class="pih">
+      <h4>Accessible Online Resources</h4>
+      <p>Diverse online courses on research and health topics. Need-based scholarships available. 80% of profits donated to the Q2 Foundation.</p>
+    </div>
+  </div>
+  <div class="princ rv d2">
+    <div class="picn">🖊️</div>
+    <div class="pih">
+      <h4>Youth-Led Blog Platform</h4>
+      <p>A platform for youth to express STEAM interests, collaborate on innovative research ideas, and communicate questions about the research process in a supportive environment.</p>
+    </div>
+  </div>
+  <div class="princ rv d3">
+    <div class="picn">🌍</div>
+    <div class="pih">
+      <h4>The Q2 Foundation</h4>
+      <p>Fostering education, innovation, and growth in STEAM — actively promoting engagement and empowerment in the community.</p>
+    </div>
+  </div>
+  <div class="mission-video rv d4">
+    <div class="mission-video-frame">
+      <iframe
+        src="https://www.youtube.com/embed/OxfkZqXNd7Q"
+        title="Project Q2 Video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="mission-video-cap">Learn more about Project Q2 and the work of the Q2 Foundation.</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- FOUNDATION -->
