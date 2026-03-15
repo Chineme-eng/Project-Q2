@@ -556,6 +556,81 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
     max-height: 48px;
   }
 }
+.team-page-sec {
+  background: var(--off);
+}
+
+.team-group {
+  margin-bottom: 72px;
+}
+
+.team-group:last-child {
+  margin-bottom: 0;
+}
+
+.team-group-head {
+  margin-bottom: 28px;
+}
+
+.team-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.team-member-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  padding: 24px 22px;
+  transition: var(--ease);
+  box-shadow: var(--sh1);
+}
+
+.team-member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sh2);
+  border-color: rgba(245,195,0,.35);
+}
+
+.team-member-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.team-member-role {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  color: var(--yd);
+}
+
+.team-member-meta {
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--gd);
+  line-height: 1.7;
+}
+
+.advisors-grid .team-member-card {
+  padding: 26px 24px;
+}
+
+@media (max-width: 1024px) {
+  .team-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .team-list-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -571,7 +646,7 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
       <li><button class="act" data-p="home" onclick="gp('home')">Home</button></li>
       <li><button data-p="programs" onclick="gp('programs')">Programs</button></li>
       <li><button onclick="gp('home');setTimeout(()=>sc('#foundation'),80)">Q2 Foundation</button></li>
-      <li><button onclick="gp('home');setTimeout(()=>sc('#team'),80)">Our Team</button></li>
+      <li><button data-p="team" onclick="gp('team')">Our Team</button></li>
       <li><button data-p="blog" onclick="gp('blog')">Blog</button></li>
       <li><button onclick="gp('home');setTimeout(()=>sc('#donations'),80)">Donations</button></li>
       <li><button onclick="gp('home');setTimeout(()=>sc('#verify'),80)">Verify Certificate</button></li>
@@ -626,6 +701,139 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
   </div>
 </section>
 
+<!-- ════════════════════════════════════════
+     TEAM PAGE
+════════════════════════════════════════ -->
+<div class="pg" id="pg-team">
+
+  <div class="phero">
+    <div class="phg"></div>
+    <div class="phin">
+      <div class="eye">Our Team</div>
+      <h1>Meet the People Behind Project Q2</h1>
+      <p>Our work is powered by a global team of founders, operators, researchers, creatives, mentors, and chapter leaders committed to expanding access to research education.</p>
+    </div>
+  </div>
+
+  <section class="sec team-page-sec">
+    <div class="si">
+
+      <div class="team-group">
+        <div class="team-group-head">
+          <div class="eye">Core Team</div>
+          <h2 class="sh">Core Team</h2>
+          <p class="ssub">The leadership and execution team driving Project Q2 forward.</p>
+        </div>
+
+        <div class="team-list-grid">
+          <div class="team-member-card">
+            <div class="team-member-name">Tanzim Redwan</div>
+            <div class="team-member-role">Founder</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Blake Davis</div>
+            <div class="team-member-role">Co-founder</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Harima Khan</div>
+            <div class="team-member-role">CEO</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Dilara Hashmi</div>
+            <div class="team-member-role">CGO</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Kathrine Oduah-Enendu</div>
+            <div class="team-member-role">CTO</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Zaima Khanam Warda</div>
+            <div class="team-member-role">Operations Lead</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Nishka Mundhra</div>
+            <div class="team-member-role">Lead Video Editor</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Preadarshini Ramamoorthy</div>
+            <div class="team-member-role">Design Lead</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Aamna Binte Najiullah Khan</div>
+            <div class="team-member-role">Research Lead</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Suhana Rastogi</div>
+            <div class="team-member-role">Outreach Lead</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Ayesha Huq</div>
+            <div class="team-member-role">Research Executive</div>
+          </div>
+
+          <div class="team-member-card">
+            <div class="team-member-name">Mahfuj Ahmed</div>
+            <div class="team-member-role">Research Executive</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <div class="team-group-head">
+          <div class="eye">Founding Advisors and Mentors</div>
+          <h2 class="sh">Founding Advisors and Mentors</h2>
+          <p class="ssub">Experienced mentors supporting Project Q2’s long-term vision and growth.</p>
+        </div>
+
+        <div class="team-list-grid advisors-grid">
+          <div class="team-member-card advisor-card">
+            <div class="team-member-name">Amber Wong</div>
+            <div class="team-member-role">Founding Advisor &amp; Mentor</div>
+            <div class="team-member-meta">HKU BPsyc '27 | Laidlaw Scholar '24</div>
+          </div>
+
+          <div class="team-member-card advisor-card">
+            <div class="team-member-name">Soneesh Kothagundla</div>
+            <div class="team-member-role">Founding Advisor &amp; Mentor</div>
+            <div class="team-member-meta">Bestselling Author | Featured on Forbes, Fox, US News, Times Square | Top 10 Emerging Innovators 2026 | Regeneron STS Scholar | 20 Under 20 | Research @ HMS • MGH • Emory | Building Resonair, CHSI | Policy @ ALCSI, NMDP</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <div class="team-group-head">
+          <div class="eye">Chapter Leaders</div>
+          <h2 class="sh">Chapter Leaders</h2>
+          <p class="ssub">Regional leaders helping expand Project Q2’s community internationally.</p>
+        </div>
+
+        <div class="team-list-grid">
+          <div class="team-member-card">
+            <div class="team-member-name">Samin Yeasar Sarra</div>
+            <div class="team-member-role">Bangladesh Chapter Leader</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div style="background:var(--black);text-align:center;padding:28px;color:rgba(255,255,255,.3);font-size:11.5px">
+    © 2025 Project Q2. All Rights Reserved.
+  </div>
+
+</div>
+  
 <!-- STATS -->
 <div class="stats">
   <div class="sw">
@@ -787,42 +995,6 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="sec team-sec" id="team">
-  <div class="si">
-    <div class="eye rv">Our Team</div>
-    <h2 class="sh rv">Leadership &amp; Founders</h2>
-    <p class="ssub rv">Project Q2 is led by a dedicated team of student researchers and young professionals committed to democratizing research education worldwide.</p>
-    <div class="tgrid">
-      <div class="tcard rv">
-        <div class="img-ph t-img-ph"><div style="font-size:22px">👤</div></div>
-        <div class="tbadge">CEO &amp; Founder</div>
-        <div class="tname">Tanzim Redwan</div>
-        <div class="trole">Chief Executive Officer</div>
-      </div>
-      <div class="tcard rv d1">
-        <div class="img-ph t-img-ph"><div style="font-size:22px">👤</div></div>
-        <div class="tbadge">COO &amp; Co-Founder</div>
-        <div class="tname">Blake E. Davis</div>
-        <div class="trole">Chief Operating Officer</div>
-      </div>
-      <div class="tcard rv d2">
-        <div class="img-ph t-img-ph"><div style="font-size:22px">👤</div></div>
-        <div class="tbadge">CSO</div>
-        <div class="tname">Akter Zahan Prokriti</div>
-        <div class="trole">Chief Strategy Officer</div>
-      </div>
-      <div class="tcard rv d3">
-        <div class="img-ph t-img-ph"><div style="font-size:22px">👤</div></div>
-        <div class="tbadge">CGO</div>
-        <div class="tname">Harima Khan</div>
-        <div class="trole">Chief Growth Officer</div>
-      </div>
-    </div>
-    <p class="rv" style="margin-top:18px;font-size:13px;color:var(--gd);text-align:center">Team member positions will soon be decided and published.</p>
   </div>
 </section>
 
