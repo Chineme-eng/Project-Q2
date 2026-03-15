@@ -466,6 +466,100 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
   .crow{grid-template-columns:1fr}
   .faq-g{grid-template-columns:1fr;gap:28px}
 }
+.par-sec {
+  padding: 72px 0;
+  overflow: hidden;
+}
+
+.pin {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.plbl {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  opacity: 0.8;
+}
+
+.partner-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.partner-track {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: max-content;
+  animation: scrollPartners 28s linear infinite;
+}
+
+.partner-logo {
+  flex: 0 0 auto;
+  min-width: 180px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+}
+
+.partner-logo img {
+  max-width: 140px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+.partner-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+@keyframes scrollPartners {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-track {
+    gap: 18px;
+    animation-duration: 20s;
+  }
+
+  .partner-logo {
+    min-width: 140px;
+    height: 72px;
+    padding: 14px 18px;
+  }
+
+  .partner-logo img {
+    max-width: 100px;
+    max-height: 38px;
+  }
+}
 </style>
 </head>
 <body>
@@ -914,13 +1008,25 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
 <div class="par-sec">
   <div class="pin">
     <div class="plbl">Affiliated with the best, to bring you the best</div>
-    <div class="prow">
-      <div class="ppill">Stoodive</div>
-      <div class="ppill">HUMS</div>
-      <div class="ppill">Synthica</div>
-      <div class="ppill">Y-Combinator Startups</div>
-      <div class="ppill">University Research Institutions</div>
-      <div class="ppill">Youth-Led Nonprofits</div>
+
+    <div class="partner-marquee">
+      <div class="partner-track">
+        <!-- set 1 -->
+        <div class="partner-logo"><img src="stoodive.png" alt="HUMS"></div>
+        <div class="partner-logo"><img src="hums.png" alt="Echo"></div>
+        <div class="partner-logo"><img src="synthica.png" alt="Synthica"></div>
+        <div class="partner-logo"><img src="Picao-Logo.png" alt="Picao AI"></div>
+        <div class="partner-logo"><img src="university.png" alt="NSRI"></div>
+        <div class="partner-logo"><img src="nonprofit.png" alt="ColdMatch"></div>
+
+        <!-- set 2 (duplicate for seamless looping) -->
+        <div class="partner-logo"><img src="stoodive.png" alt="HUMS"></div>
+        <div class="partner-logo"><img src="hums.png" alt="Echo"></div>
+        <div class="partner-logo"><img src="synthica.png" alt="Synthica"></div>
+        <div class="partner-logo"><img src="Picao-Logo.png" alt="Picao AI"></div>
+        <div class="partner-logo"><img src="university.png" alt="NSRI"></div>
+        <div class="partner-logo"><img src="nonprofit.png" alt="ColdMatch"></div>
+      </div>
     </div>
   </div>
 </div>
