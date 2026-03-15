@@ -631,6 +631,77 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
     grid-template-columns: 1fr;
   }
 }
+.contact-page-sec {
+  background: var(--off);
+}
+
+.contact-form-wrap {
+  display: flex;
+  align-items: stretch;
+}
+
+.contact-form-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--rx);
+  padding: 28px;
+  box-shadow: var(--sh1);
+  width: 100%;
+}
+
+.contact-socials {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.contact-social-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  padding: 18px 18px;
+  transition: var(--ease);
+  box-shadow: var(--sh1);
+}
+
+.contact-social-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sh2);
+  border-color: rgba(245,195,0,.35);
+}
+
+.contact-social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--yp);
+  color: var(--yd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contact-social-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  color: var(--gx);
+  margin-bottom: 3px;
+}
+
+.contact-social-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.5;
+}
 </style>
 </head>
 <body>
@@ -650,7 +721,7 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
       <li><button data-p="blog" onclick="gp('blog')">Blog</button></li>
       <li><button onclick="gp('home');setTimeout(()=>sc('#donations'),80)">Donations</button></li>
       <li><button onclick="gp('home');setTimeout(()=>sc('#verify'),80)">Verify Certificate</button></li>
-      <li><button onclick="gp('home');setTimeout(()=>sc('#contact'),80)">Contact</button></li>
+     <li><button data-p="contact" onclick="gp('contact')">Contact</button></li>
     </ul>
     <div class="nbtns">
       <button class="btn bo blg" onclick="gp('student')">Student Login</button>
@@ -1010,35 +1081,6 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="sec con-sec" id="contact">
-  <div class="si">
-    <div class="con-g">
-      <div>
-        <div class="eye rv">Get In Touch</div>
-        <h2 class="sh rv">We'd Love to Hear From You</h2>
-        <p style="font-size:14px;color:var(--gd);margin-bottom:26px;line-height:1.8" class="rv">Thanks for reaching out! We'll get back to you within 48 hours.</p>
-        <div class="ci-list">
-          <div class="ci rv"><div class="cii">📞</div><div><div class="cil">Call Us</div><div class="civ">(234) 567-8912</div></div></div>
-          <div class="ci rv d1"><div class="cii">✉️</div><div><div class="cil">Email Us</div><div class="civ"><a href="mailto:blakedjbs@gmail.com" style="color:var(--yd)">blakedjbs@gmail.com</a></div></div></div>
-          <div class="ci rv d2"><div class="cii">📍</div><div><div class="cil">Our Location</div><div class="civ">Mirpur DOHS, Dhaka, Bangladesh</div></div></div>
-        </div>
-      </div>
-      <div class="cf rv">
-        <div class="crow">
-          <input class="cinp" type="text" placeholder="First Name"/>
-          <input class="cinp" type="text" placeholder="Last Name"/>
-        </div>
-        <input class="cinp" type="tel" placeholder="Phone Number"/>
-        <input class="cinp" type="email" placeholder="Email"/>
-        <textarea class="cinp cta" placeholder="Message"></textarea>
-        <button class="btn bd" onclick="subContact()">Submit</button>
-        <div class="conf" id="cconf">✓ Message sent! We'll reply within 48 hours.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PARTNERS -->
 <div class="par-sec">
   <div class="pin">
@@ -1122,6 +1164,106 @@ footer{background:var(--black);color:rgba(255,255,255,.48);padding:56px 24px 26p
 </footer>
 </div><!-- end home -->
 
+<!-- ════════════════════════════════════════
+     CONTACT PAGE
+════════════════════════════════════════ -->
+<div class="pg" id="pg-contact">
+
+  <div class="phero">
+    <div class="phg"></div>
+    <div class="phin">
+      <div class="eye">Contact</div>
+      <h1>Get in Touch with Project Q2</h1>
+      <p>Reach out for partnerships, student opportunities, media inquiries, volunteering, or general questions. We would love to hear from you.</p>
+    </div>
+  </div>
+
+  <section class="sec contact-page-sec">
+    <div class="si">
+      <div class="con-g">
+
+        <div>
+          <div class="eye">Contact Information</div>
+          <h2 class="sh">Let’s Connect</h2>
+          <p class="ssub">Whether you are a student, mentor, school, nonprofit, or collaborator, this is the best place to reach the Project Q2 team.</p>
+
+          <div class="ci-list">
+            <div class="ci">
+              <div class="cii">✉️</div>
+              <div>
+                <div class="cil">Email</div>
+                <div class="civ">
+                  <a href="mailto:blakedjbs@gmail.com">blakedjbs@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="ci">
+              <div class="cii">📍</div>
+              <div>
+                <div class="cil">Location</div>
+                <div class="civ">Mirpur DOHS, Dhaka, Bangladesh</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a class="contact-social-card" href="https://www.linkedin.com/company/106784167/admin/dashboard/" target="_blank" rel="noopener noreferrer">
+              <div class="contact-social-icon">in</div>
+              <div>
+                <div class="contact-social-label">LinkedIn</div>
+                <div class="contact-social-value">Project Q2 on LinkedIn</div>
+              </div>
+            </a>
+
+            <a class="contact-social-card" href="https://www.facebook.com/projectq2" target="_blank" rel="noopener noreferrer">
+              <div class="contact-social-icon">f</div>
+              <div>
+                <div class="contact-social-label">Facebook</div>
+                <div class="contact-social-value">facebook.com/projectq2</div>
+              </div>
+            </a>
+
+            <a class="contact-social-card" href="https://www.youtube.com/@theprojectq2" target="_blank" rel="noopener noreferrer">
+              <div class="contact-social-icon">▶</div>
+              <div>
+                <div class="contact-social-label">YouTube</div>
+                <div class="contact-social-value">@theprojectq2</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <div class="contact-form-card">
+            <div class="eye">Send a Message</div>
+            <h2 class="sh" style="font-size:28px;margin-bottom:10px">Contact Form</h2>
+            <p class="ssub" style="margin-bottom:24px;max-width:none">Send us a message and we’ll get back to you as soon as possible.</p>
+
+            <div class="cf">
+              <div class="crow">
+                <input class="cinp" type="text" placeholder="First Name" />
+                <input class="cinp" type="text" placeholder="Last Name" />
+              </div>
+              <input class="cinp" type="tel" placeholder="Phone Number" />
+              <input class="cinp" type="email" placeholder="Email Address" />
+              <textarea class="cinp cta" placeholder="Your Message"></textarea>
+              <button class="btn bd" onclick="subContact()">Submit Message</button>
+              <div class="conf" id="cconf">✓ Message sent! We'll reply within 48 hours.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div style="background:var(--black);text-align:center;padding:28px;color:rgba(255,255,255,.3);font-size:11.5px">
+    © 2025 Project Q2. All Rights Reserved.
+  </div>
+
+</div>
+  
 <!-- ════════════════════════════════════════
      TEAM PAGE
 ════════════════════════════════════════ -->
